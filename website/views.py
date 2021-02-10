@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 
+
 def home(request):
 	return render(request, 'home.html', {})
+
 
 def contact(request):
 	if request.method == "POST":
@@ -51,7 +53,7 @@ def appointment(request):
 			'Appointment Request', # subject
 			appointment, # message
 			your_email, # from email
-			['john@codemy.com'], # To Email
+			['sitdikov365@gmail.com'], # To Email
 			)
 		
 		return render(request, 'appointment.html', {
